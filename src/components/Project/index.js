@@ -4,9 +4,8 @@ function Project({ project }) {
   const [img, setImg] = useState();
   useEffect(() => {
     async function getImg() {
-      console.log(project.img);
-      const loadedImg = await import(`assets/img/${project.img}`);
-      setImg(loadedImg.default);
+      const imgData = await import(`assets/img/${project.img}`);
+      setImg(imgData.default);
     }
     getImg();
   }, [project.img, img]);

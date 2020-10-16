@@ -6,9 +6,11 @@ function Navigation(props) {
     <ul>
       {tabs.map((tab, index) => (
         <li key={index}>
-          <a href={`#${tab}`} onClick={() => setCurrentTab(tab)}>
-            {tab}
-          </a>
+          <h2>
+            <a href={`#${tab}`} onClick={() => setCurrentTab(tab)}>
+              {tab}
+            </a>
+          </h2>
         </li>
       ))}
     </ul>
