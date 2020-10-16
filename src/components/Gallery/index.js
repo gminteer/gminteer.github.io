@@ -1,12 +1,16 @@
 import React from 'react';
 
-import lyricLookup from 'assets/img/lyric-look-up.jpg';
+import Project from 'components/Project';
+import projects from 'assets/data/projects.json';
 
 function Gallery(props) {
   return (
-    <div>
-      <img src={lyricLookup} alt="Lyric Look-up in action"></img>
-    </div>
+    <main>
+      <h2>Projects</h2>
+      {projects.map((project, index) => (
+        <Project project={project} key={index} />
+      ))}
+    </main>
   );
 }
 
