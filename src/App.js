@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
+import Header from 'components/Header';
+import Footer from 'components/Footer';
+import About from 'components/About';
+import Gallery from 'components/Gallery';
+
+const ContentComponents = { about: <About />, projects: <Gallery /> };
 function App() {
+  const tabs = ['about', 'projects', 'contact', 'resume'];
+  const [currentTab, setCurrentTab] = useState(tabs[0]);
+  const props = { tabs, currentTab, setCurrentTab };
+  console.log(currentTab);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header {...props} />
+      {ContentComponents[currentTab]}
+      <Footer />
+    </>
   );
 }
 
