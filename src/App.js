@@ -15,9 +15,10 @@ const ContentComponents = {
 };
 
 function App() {
-  const tabs = ['about', 'projects', 'contact', 'resume'];
+  const tabs = Object.keys(ContentComponents);
   const [currentTab, setCurrentTab] = useState(tabs[0]);
   const props = { tabs, currentTab, setCurrentTab };
+
   return (
     <>
       <Header {...props} />

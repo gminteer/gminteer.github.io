@@ -1,17 +1,27 @@
-import React from 'react';
-import headShot from 'assets/img/headshot.jpg';
+import React, { useState, useEffect } from 'react';
 
-function About() {
+import data from 'assets/data/about.json';
+
+export default function About() {
+  const [img, setImg] = useState();
+
+  useEffect(() => {
+    async function getImg() {
+      const imgData = await import(`assets/img/${data.img}`);
+      setImg(imgData.default);
+    }
+    getImg();
+  }, [img]);
+
   return (
     <main>
       <figure>
-        <img src={headShot} alt="Greg Minteer"></img>
+        <img src={img} alt={data.name} />
         <figcaption>
-          <h2></h2>
+          <h3>{data.name}</h3>
+          <p>{data.blurb}</p>
         </figcaption>
       </figure>
     </main>
   );
 }
-
-export default About;

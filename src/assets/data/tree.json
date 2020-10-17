@@ -1,0 +1,51 @@
+{
+  "name": "Buzzwords",
+  "children": [
+    {
+      "name": "Web Technologies",
+      "children": [
+        {
+          "name": "Front End",
+          "children": [
+            {"name": "Semantic HTML"},
+            {"name": "JavaScript (ES5+)"},
+            {"name": "Modern CSS and SCSS"},
+            {"name": "React"}    
+          ]
+        },
+        {
+          "name": "Back End",
+          "children": [
+            {"name": "Node.js"},
+            {"name": "Express"},
+            {"name": "SQL"},
+            {"name": "MongoDB"}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Operating Systems",
+      "children": [
+        {"name": "Microsoft Windows"},
+        {"name": "Linux"}
+      ]
+    },
+    {
+      "name": "Networking",
+      "children": [
+        {"name": "TCP/IP"},
+        {"name": "DHCP"},
+        {"name": "DNS"},
+        {"name": "Wi-Fi"}
+      ]
+    },
+    {
+      "name": "Scripting Languages",
+      "children": [
+        {"name": "Python 3"},
+        {"name": "PowerShell"}
+      ]
+    }
+  ]
+}

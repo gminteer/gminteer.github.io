@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-function Project({ project }) {
+export default function Project({ project }) {
   const [img, setImg] = useState();
+
   useEffect(() => {
     async function getImg() {
       const imgData = await import(`assets/img/${project.img}`);
@@ -9,6 +10,7 @@ function Project({ project }) {
     }
     getImg();
   }, [project.img, img]);
+
   return (
     <div>
       <figure>
@@ -21,5 +23,3 @@ function Project({ project }) {
     </div>
   );
 }
-
-export default Project;

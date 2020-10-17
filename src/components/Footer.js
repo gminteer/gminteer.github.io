@@ -1,21 +1,15 @@
 import React from 'react';
 
-function Footer() {
-  return (
-    <footer>
-      <ul>
-        <li>
-          <a href="#">Github</a>
-        </li>
-        <li>
-          <a href="#">LinkedIn</a>
-        </li>
-        <li>
-          <a href="#">Skype</a>
-        </li>
-      </ul>
-    </footer>
-  );
-}
+import data from 'assets/data/footer.json';
 
-export default Footer;
+export default () => (
+  <footer>
+    <ul>
+      {data.map((item, index) => (
+        <li key={index}>
+          <a href={item.href}>{item.name}</a>
+        </li>
+      ))}
+    </ul>
+  </footer>
+);
