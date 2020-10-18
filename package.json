@@ -18,6 +18,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "homepage": "https://gminteer.github.io/react-portfolio",
   "eslintConfig": {
     "extends": "react-app"
   },
