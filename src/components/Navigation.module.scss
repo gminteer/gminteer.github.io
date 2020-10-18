@@ -1,0 +1,19 @@
+@import 'styles/_common';
+
+.Navigation {
+  h2 {
+    display: inline;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+  }
+  a {
+    text-transform: capitalize;
+    text-decoration: none;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+  }
+}

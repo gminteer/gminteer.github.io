@@ -1,0 +1,36 @@
+// color scheme
+$colors: (
+  'imperial-red': #e63946,
+  'honeydew': #f1faee,
+  'powder-blue': #a8dadc,
+  'celadon-blue': #457b9d,
+  'prussian-blue': #1d3557,
+);
+
+$primary: map-get(
+  $map: $colors,
+  $key: 'celadon-blue',
+);
+
+$primary-invert: map-get(
+  $map: $colors,
+  $key: 'honeydew',
+);
+
+$primary-lighter: map-get(
+  $map: $colors,
+  $key: 'powder-blue',
+);
+
+$primary-darker: map-get(
+  $map: $colors,
+  $key: 'prussian-blue',
+);
+
+$accent: map-get(
+  $map: $colors,
+  $key: 'imperial-red',
+);
+
+// shared variables
+$border-primary: 0.25em solid $primary-darker;
