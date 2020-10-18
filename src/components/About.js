@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import data from 'assets/data/about.json';
 import styles from './About.module.scss';
 
@@ -7,7 +8,6 @@ export default function About() {
 
   useEffect(() => {
     async function getImg() {
-      const data = await import('assets/data/about.json');
       const imgData = await import(`assets/img/${data.img}`);
       setImg(imgData.default);
     }

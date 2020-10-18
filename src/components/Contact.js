@@ -1,9 +1,7 @@
 import React from 'react';
 
-import styles from './Contact.module.scss';
-
 export default () => (
-  <main className={styles.Contact}>
+  <main>
     <form id="comment">
       <label htmlFor="name">Your name</label>
       <input type="text" id="name" name="name" autoComplete="name" />
