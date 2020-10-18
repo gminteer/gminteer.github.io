@@ -1,0 +1,15 @@
+@import 'styles/_common';
+
+.Project {
+  --img-size: 24em;
+  figure {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    img {
+      height: var(--img-size);
+      width: var(--img-size);
+    }
+  }
+}

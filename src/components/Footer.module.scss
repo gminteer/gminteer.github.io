@@ -6,9 +6,13 @@
   left: 0;
   right: 0;
   background-color: $primary;
-  padding: 1em;
   border-top: $border-primary;
+  height: $footer-height;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   ul {
+    width: 100%;
     display: flex;
     flex-direction: row;
     list-style-type: none;

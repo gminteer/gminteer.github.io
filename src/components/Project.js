@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import styles from './Project.module.scss';
+
 export default function Project({ project }) {
   const [img, setImg] = useState();
 
@@ -12,14 +14,16 @@ export default function Project({ project }) {
   }, [project.img, img]);
 
   return (
-    <div>
+    <span className={styles.Project}>
       <figure>
+        <a href={project.href}>
+          <img src={img} alt={`${project.name} in action`} />
+        </a>
         <figcaption>
           <h3>{project.name}</h3>
           <p>{project.tag}</p>
         </figcaption>
-        <img src={img} alt={`${project.name} in action`} />
       </figure>
-    </div>
+    </span>
   );
 }
