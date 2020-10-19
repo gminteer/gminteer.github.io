@@ -1,1 +1,0 @@
-{"version":3,"sources":["assets/img/lyric-look-up.jpg"],"names":["module","exports"],"mappings":"4GAAAA,EAAOC,QAAU,IAA0B","file":"static/js/8.d4923b84.chunk.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/media/lyric-look-up.bdc1f90c.jpg\";"],"sourceRoot":""}
