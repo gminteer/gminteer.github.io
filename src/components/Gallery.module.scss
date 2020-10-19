@@ -1,6 +1,10 @@
 @import 'styles/_common';
 
 .Gallery {
+  // CSS variables for Figure children
+  --img-size: 24em;
+  --border-radius: 1em;
+
   display: flex;
   flex-flow: column wrap;
   justify-content: space-around;
