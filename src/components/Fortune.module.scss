@@ -1,0 +1,71 @@
+@import 'styles/_common';
+
+.Fortune {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono-font);
+  color: $primary-invert;
+
+  .card {
+    width: 85%;
+    height: 85%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    header {
+      display: flex;
+      flex-direction: row;
+      border-bottom: 0.25em solid $primary-darker;
+
+      span {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+      }
+
+      .activeTab {
+        background-color: $primary-darker;
+      }
+
+      .tabBackground {
+        background-color: $primary;
+        flex-grow: 2;
+      }
+    }
+
+    pre {
+      font-family: var(--mono-font);
+      height: 100%;
+      overflow: auto;
+      font-size: 0.85em;
+      word-wrap: break-word;
+      white-space: pre-wrap;
+      background-color: $primary-darker;
+      padding: 0.25em;
+
+      span {
+        font-weight: bold;
+      }
+      .dir {
+        color: teal;
+      }
+      .branch {
+        color: purple;
+      }
+      .node {
+        color: green;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .card {
+      pre {
+        font-size: 1em;
+      }
+    }
+  }
+}
