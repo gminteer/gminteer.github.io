@@ -3,20 +3,36 @@
 .Navigation {
   h2 {
     display: inline;
-    font-size: large;
+    font-size: medium;
   }
+
   ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     list-style-type: none;
   }
+
   a {
+    font-family: var(--mono-font);
     text-transform: capitalize;
-    text-decoration: none;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
+    padding-left: 0.45em;
+    padding-right: 0.45em;
   }
+
+  a,
+  a:visited {
+    color: $primary-invert;
+  }
+
+  .activeTab {
+    background-color: $primary-lighter;
+    a,
+    a:visited {
+      color: black;
+    }
+  }
+
   @media screen and (min-width: 768px) {
     h2 {
       font-size: x-large;

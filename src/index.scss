@@ -1,15 +1,18 @@
 @import 'styles/_common';
 
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Open+Sans:ital@0;1&display=swap');
+
 @font-face {
-  font-family: EGA;
-  src: url('./assets/fonts/Web_IBM_EGA_8x14.woff');
+  font-family: 'Cascadia Code';
+  src: url('./assets/fonts/CascadiaCodePL.woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 :root {
-  --mono-font: EGA, 'Consolas', 'Lucida Console', 'Monaco', 'Courier New',
-    'Courier', monospace;
+  --mono-font: 'Cascadia Code', 'Consolas', 'Lucida Console', 'Monaco',
+    'Courier New', 'Courier', monospace;
+  --sans-font: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -23,13 +26,18 @@ body {
 }
 
 html,
-body,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'EB Garamond', 'Palatino Linotype', 'Book Antiqua', Palatino,
+    serif;
+}
 #root {
-  // hacks since header/footer are position: fixed
-  height: calc(calc(100% - #{$header-height}) - #{$footer-height});
-  position: fixed;
-  top: $header-height;
-  left: 0;
-  right: 0;
+  height: calc(100% - calc(#{$header-height} + #{$footer-height}));
   overflow: auto;
 }

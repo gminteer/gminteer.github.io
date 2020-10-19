@@ -5,7 +5,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
+  * {
+    font-family: var(--sans-font);
+  }
   form {
     width: 80%;
     height: 80%;
@@ -50,8 +52,8 @@
     }
   }
   .error {
-    background-color: $primary-darker;
-    color: $error;
+    color: adjust-color($color: $error, $lightness: -20%);
     font-weight: bold;
+    font-style: italic;
   }
 }

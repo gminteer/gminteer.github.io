@@ -1,18 +1,24 @@
 [
   {
     "name": "Github",
-    "href": "https://github.com/gminteer"
+    "href": "https://github.com/gminteer",
+    "icon": "github.svg",
+    "mono": true
   },
   {
     "name": "LinkedIn",
-    "href": "https://linkedin.com/gminteer"
+    "href": "https://linkedin.com/gminteer",
+    "icon": "linkedin.svg"
   },
   {
     "name": "Email",
-    "href": "mailto:gminteer@gmail.com"
+    "href": "mailto:gminteer@gmail.com",
+    "icon": "email.svg",
+    "mono": true
   },
   {
     "name": "Skype",
-    "href": "skype:gminteer?chat" 
+    "href": "skype:gminteer?chat",
+    "icon": "skype.svg"
   }
 ]

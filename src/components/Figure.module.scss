@@ -38,10 +38,8 @@
       background-color: $primary-darker;
       color: $primary-invert;
       width: 100%;
-
-      h3 {
-        padding: 0.25em;
-      }
+      font-family: var(--sans-font);
+      padding: 0.25em;
     }
 
     .body {
