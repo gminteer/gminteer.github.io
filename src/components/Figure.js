@@ -17,8 +17,8 @@ export default function Figure({ title, body, imgCfg }) {
     <figure className={styles.Figure}>
       <img src={img} alt={imgCfg.alt} />
       <figcaption>
-        <div className={styles.title}>{title}</div>
-        <div className={styles.body}>{body}</div>
+        <section className={styles.title}>{title}</section>
+        <section className={styles.body}>{body}</section>
       </figcaption>
     </figure>
   );
