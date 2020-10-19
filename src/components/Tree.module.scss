@@ -1,0 +1,18 @@
+@import 'styles/_common';
+
+.Tree {
+  margin: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  list-style: none;
+
+  .Tree {
+    list-style: circle;
+
+    .Tree {
+      list-style: inside;
+    }
+  }
+}

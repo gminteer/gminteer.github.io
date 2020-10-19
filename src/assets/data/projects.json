@@ -1,16 +1,22 @@
 [
   {
     "name": "pair.pro",
-    "tag": "Swap skills with other developers",
+    "blurb": "Swap skills with other developers",
     "repo": "https://github.com/gminteer/pair-pro",
-    "href": "https://evening-shelf-38157.herokuapp.com/",
-    "img": "pair-pro.jpg"
+    "live": "https://evening-shelf-38157.herokuapp.com/",
+    "img": {
+      "src": "pair-pro.jpg",
+      "alt": "pair.pro in action"
+    }
   },
   {
     "name": "Lyric Look-up",
-    "tag": "Sing along with your favorite songs",
+    "blurb": "Sing along with your favorite songs",
     "repo": "https://github.com/Mayorgak/lyric-look-up",
-    "href": "https://Mayorgak.github.io/lyric-look-up",
-    "img": "lyric-look-up.jpg"
+    "live": "https://Mayorgak.github.io/lyric-look-up",
+    "img": {
+      "src": "lyric-look-up.jpg",
+      "alt": "Lyric Look-up in action"
+    }
   }
 ]
