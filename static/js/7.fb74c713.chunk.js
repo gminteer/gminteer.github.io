@@ -1,0 +1,2 @@
+(this["webpackJsonpreact-portfolio"]=this["webpackJsonpreact-portfolio"]||[]).push([[7],{37:function(o,t,p){o.exports=p.p+"static/media/headshot.79dd241f.jpg"}}]);
+//# sourceMappingURL=7.fb74c713.chunk.js.map
