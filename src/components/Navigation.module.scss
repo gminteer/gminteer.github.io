@@ -3,6 +3,7 @@
 .Navigation {
   h2 {
     display: inline;
+    font-size: large;
   }
   ul {
     display: flex;
@@ -15,5 +16,10 @@
     text-decoration: none;
     padding-left: 0.75em;
     padding-right: 0.75em;
+  }
+  @media screen and (min-width: 768px) {
+    h2 {
+      font-size: x-large;
+    }
   }
 }

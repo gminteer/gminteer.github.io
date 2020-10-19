@@ -2,9 +2,10 @@ import React from 'react';
 
 import Figure from 'components/Figure';
 import projects from 'assets/data/projects.json';
+import styles from './Gallery.module.scss';
 
 export default () => (
-  <main>
+  <main className={styles.Gallery}>
     {projects.map((project, index) => (
       <Figure
         imgCfg={project.img}

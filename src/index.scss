@@ -1,4 +1,16 @@
-@import './_common';
+@import 'styles/_common';
+
+@font-face {
+  font-family: EGA;
+  src: url('./assets/fonts/Web_IBM_EGA_8x14.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --mono-font: EGA, 'Consolas', 'Lucida Console', 'Monaco', 'Courier New',
+    'Courier', monospace;
+}
 
 * {
   margin: 0;

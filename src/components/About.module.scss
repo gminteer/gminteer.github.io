@@ -2,7 +2,7 @@
 
 .About {
   // css variables for Figures
-  --img-size: 18em;
+  --img-size: 8em;
   --border-radius: 50%;
 
   display: flex;
@@ -10,4 +10,15 @@
   align-items: center;
   justify-content: center;
   height: 100%;
+}
+
+@media screen and (min-width: 425px) {
+  .About {
+    --img-size: 12em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .About {
+    --img-size: 18em;
+  }
 }
