@@ -13,6 +13,7 @@ body {
 html,
 body,
 #root {
+  // hacks since header/footer are position: fixed
   height: calc(calc(100% - #{$header-height}) - #{$footer-height});
   position: fixed;
   top: $header-height;
