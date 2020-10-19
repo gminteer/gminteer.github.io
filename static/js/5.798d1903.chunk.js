@@ -1,2 +1,0 @@
-(this["webpackJsonpreact-portfolio"]=this["webpackJsonpreact-portfolio"]||[]).push([[5],{33:function(p,o,t){p.exports=t.p+"static/media/pair-pro.7157db9c.jpg"}}]);
-//# sourceMappingURL=5.798d1903.chunk.js.map
