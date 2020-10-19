@@ -34,3 +34,6 @@ $error: map-get(
 
 // shared variables
 $border-primary: 0.25em solid $primary-darker;
+// hacks to get around position: fixed
+$header-height: 3.5em;
+$footer-height: 2.5em;
