@@ -1,0 +1,50 @@
+@import 'styles/_common';
+
+.Background {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -9999;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  .stripe {
+    margin: 0 0.2em;
+    width: 4em;
+    height: 100%;
+    content: '';
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -9998;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
+  .prussianBlue {
+    background-color: map-get($map: $colors, $key: 'prussian-blue');
+  }
+
+  .celadonBlue {
+    background-color: map-get($map: $colors, $key: 'celadon-blue');
+  }
+
+  .powderBlue {
+    background-color: map-get($map: $colors, $key: 'powder-blue');
+  }
+
+  .honeydew {
+    background-color: map-get($map: $colors, $key: 'honeydew');
+  }
+
+  .white {
+    background-color: white;
+  }
+}
