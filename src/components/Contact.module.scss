@@ -1,0 +1,56 @@
+@import 'styles/_common';
+
+.Contact {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  form {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    background-color: $primary;
+    border: $border-primary;
+
+    .labelBlock,
+    input {
+      padding: 0.5em;
+    }
+
+    .labelBlock {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    input,
+    textarea {
+      margin-left: 0.5em;
+      margin-right: 0.5em;
+      background-color: $primary-invert;
+    }
+
+    input.invalidField,
+    textarea.invalidField {
+      outline: 0.1em solid $error;
+    }
+
+    textarea {
+      flex-grow: 2;
+      margin-bottom: 0.5em;
+    }
+
+    button {
+      padding: 0.5em;
+      background-color: $primary-darker;
+      color: $primary-invert;
+    }
+  }
+  .error {
+    background-color: $primary-darker;
+    color: $error;
+  }
+}
