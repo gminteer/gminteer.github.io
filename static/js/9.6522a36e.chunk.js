@@ -1,0 +1,2 @@
+(this["webpackJsonpreact-portfolio"]=this["webpackJsonpreact-portfolio"]||[]).push([[9],{32:function(o,t,i){o.exports=i.p+"static/media/linkedin.52cf419f.svg"}}]);
+//# sourceMappingURL=9.6522a36e.chunk.js.map
