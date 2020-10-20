@@ -1,15 +1,22 @@
 @import 'styles/_common';
 
+@function getDarker($colorname) {
+  @return adjust-color(
+    map-get($map: $colors, $key: $colorname),
+    $lightness: -10%
+  );
+}
+
 .Background {
   position: fixed;
   top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -9999;
-  overflow: hidden;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  z-index: -9999;
 
   .stripe {
     margin: 0 0.2em;
@@ -18,33 +25,22 @@
     content: '';
   }
 
-  .overlay {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -9998;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.25);
+  .primaryDarker {
+    background-color: getDarker('prussian-blue');
   }
-
-  .prussianBlue {
-    background-color: map-get($map: $colors, $key: 'prussian-blue');
+  .primary {
+    background-color: getDarker('celadon-blue');
   }
-
-  .celadonBlue {
-    background-color: map-get($map: $colors, $key: 'celadon-blue');
+  .primaryLighter {
+    background-color: getDarker('powder-blue');
   }
-
-  .powderBlue {
-    background-color: map-get($map: $colors, $key: 'powder-blue');
+  .primaryInvert {
+    background-color: getDarker('honeydew');
   }
-
-  .honeydew {
-    background-color: map-get($map: $colors, $key: 'honeydew');
-  }
-
   .white {
     background-color: white;
+  }
+  .accent {
+    background-color: getDarker('imperial-red');
   }
 }

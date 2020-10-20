@@ -27,6 +27,11 @@ $primary-darker: map-get(
   $key: 'prussian-blue',
 );
 
+$accent: map-get(
+  $map: $colors,
+  $key: 'imperial-red',
+);
+
 $error: map-get(
   $map: $colors,
   $key: 'imperial-red',

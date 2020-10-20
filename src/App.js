@@ -18,7 +18,7 @@ const ContentComponents = {
   resume: <Resume />,
 };
 
-function App() {
+export default function App() {
   const tabs = Object.keys(ContentComponents);
   const [currentTab, setCurrentTab] = useState(tabs[0]);
   const props = { tabs, currentTab, setCurrentTab };
@@ -28,13 +28,13 @@ function App() {
   }, [currentTab]);
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <>
       <Background />
       <Header {...props} />
-      {ContentComponents[currentTab]}
+      <Suspense fallback={<div>Loading...</div>}>
+        {ContentComponents[currentTab]}
+      </Suspense>
       <Footer />
-    </Suspense>
+    </>
   );
 }
-
-export default App;

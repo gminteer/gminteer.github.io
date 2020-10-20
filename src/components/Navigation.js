@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './Navigation.module.scss';
 
-export default function Navigation({ title, tabs, currentTab, setCurrentTab }) {
+export default function Navigation({ tabs, currentTab, setCurrentTab }) {
   return (
     <nav className={styles.Navigation}>
       <ul>
