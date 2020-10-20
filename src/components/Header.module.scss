@@ -21,6 +21,10 @@
     color: $primary-invert;
     width: 100%;
     font-size: x-large;
+    a,
+    a:visited {
+      color: $primary-invert;
+    }
   }
 
   @media screen and (min-width: 768px) {

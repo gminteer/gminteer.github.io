@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 
-import Background from 'components/Background';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
+import Background from 'components/Background';
 import Fortune from 'components/Fortune';
-import About from 'components/About';
-import Gallery from 'components/Gallery';
-import Contact from 'components/Contact';
-import Resume from 'components/Resume';
+
+const About = React.lazy(() => import('components/About'));
+const Gallery = React.lazy(() => import('components/Gallery'));
+const Contact = React.lazy(() => import('components/Contact'));
+const Resume = React.lazy(() => import('components/Resume'));
 
 const ContentComponents = {
-  fortune: <Fortune />,
+  ROOT: <Fortune />,
   about: <About />,
   projects: <Gallery />,
   contact: <Contact />,
@@ -22,16 +23,17 @@ function App() {
   const [currentTab, setCurrentTab] = useState(tabs[0]);
   const props = { tabs, currentTab, setCurrentTab };
   useEffect(() => {
-    document.title = `~gminteer/${currentTab}`;
+    document.title =
+      currentTab === 'ROOT' ? '~gminteer/' : `~gminteer/${currentTab}`;
   }, [currentTab]);
 
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
       <Background />
       <Header {...props} />
       {ContentComponents[currentTab]}
       <Footer />
-    </>
+    </Suspense>
   );
 }
 
