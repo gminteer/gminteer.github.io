@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { say } from 'cowsay-browser';
 
 import FakeTerminal from './FakeTerminal';
 import { cowsayFortune } from 'utils/api';
@@ -14,5 +15,13 @@ export default function Fortune() {
     document.title = '~gminteer/';
   }, []);
 
-  return <FakeTerminal message={message} />;
+  return (
+    <FakeTerminal
+      message={
+        message
+          ? message
+          : say({ text: 'Taking the auspices...', e: '--', n: true })
+      }
+    />
+  );
 }
