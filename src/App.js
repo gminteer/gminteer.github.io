@@ -31,7 +31,7 @@ export default function App() {
             </Route>
           ))}
           <Route fallback>
-            <ErrorPage message="Page not found." />
+            <ErrorPage text="404: not found" />
           </Route>
         </Switch>
       </Suspense>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import styles from './Figure.module.scss';
+import placeholder from 'assets/img/placeholder.jpg';
 
 export default function Figure({ title, body, imgCfg }) {
   const [img, setImg] = useState();
@@ -15,7 +16,7 @@ export default function Figure({ title, body, imgCfg }) {
 
   return (
     <figure className={styles.Figure}>
-      <img src={img} alt={imgCfg.alt} />
+      <img src={img ? img : placeholder} alt={imgCfg.alt} />
       <figcaption>
         <section className={styles.title}>{title}</section>
         <section className={styles.body}>{body}</section>
