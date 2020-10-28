@@ -17,7 +17,7 @@ const Pages = {
 
 export default function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Background />
       <Header pages={Object.keys(Pages)} />
       <Suspense fallback={<ErrorPage message="Now loading..." />}>
