@@ -6,6 +6,7 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 import Background from 'components/Background';
 import Fortune from 'pages/Fortune';
+import ErrorPage from 'pages/ErrorPage';
 
 const Pages = {
   about: React.lazy(() => import('pages/About')),
@@ -19,7 +20,7 @@ export default function App() {
     <Router>
       <Background />
       <Header pages={Object.keys(Pages)} />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<ErrorPage message="Now loading..." />}>
         <Switch>
           <Route exact path="/">
             <Fortune />
@@ -29,6 +30,9 @@ export default function App() {
               <Page />
             </Route>
           ))}
+          <Route fallback>
+            <ErrorPage message="Page not found." />
+          </Route>
         </Switch>
       </Suspense>
       <Footer />

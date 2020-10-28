@@ -45,6 +45,7 @@ export default function Fortune() {
         return;
       }
     }
+
     getFortune();
     document.title = '~gminteer/';
   }, []);
