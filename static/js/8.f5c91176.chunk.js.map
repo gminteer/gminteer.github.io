@@ -1,1 +1,0 @@
-{"version":3,"sources":["assets/icons/github.svg"],"names":["module","exports"],"mappings":"4GAAAA,EAAOC,QAAU,IAA0B","file":"static/js/8.f5c91176.chunk.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/media/github.e9eddb98.svg\";"],"sourceRoot":""}
