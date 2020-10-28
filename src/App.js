@@ -20,7 +20,7 @@ export default function App() {
     <Router basename={process.env.PUBLIC_URL}>
       <Background />
       <Header pages={Object.keys(Pages)} />
-      <Suspense fallback={<ErrorPage message="Now loading..." />}>
+      <Suspense fallback={<ErrorPage text="Now loading..." />}>
         <Switch>
           <Route exact path="/">
             <Fortune />
