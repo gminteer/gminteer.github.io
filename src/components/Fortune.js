@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { say } from 'cowsay-browser';
 
 import styles from './Fortune.module.scss';
+
 export default function Fortune() {
   const [fortune, setFortune] = useState({});
 
@@ -45,6 +46,7 @@ export default function Fortune() {
       }
     }
     getFortune();
+    document.title = '~gminteer/';
   }, []);
 
   return (

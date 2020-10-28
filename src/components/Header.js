@@ -1,16 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Navigation from 'components/Navigation';
 import styles from './Header.module.scss';
 
 export default (props) => {
-  const { setCurrentTab } = props;
   return (
     <header className={styles.Header}>
       <h1>
-        <a href="#" onClick={() => setCurrentTab('ROOT')}>
-          ~gminteer/ $
-        </a>
+        <Link to="/">~gminteer/ $</Link>
       </h1>
       <Navigation {...props} />
     </header>

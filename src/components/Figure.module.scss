@@ -1,5 +1,6 @@
 @import 'styles/_common';
 
+// depends on its parent defining --img-size (there's probably a better way to do this)
 .Figure {
   --img-offset: calc(var(--img-size) / 2);
 

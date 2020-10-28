@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Figure from 'components/Figure';
 import data from 'assets/data/about.json';
 import styles from './About.module.scss';
 
 export default function About() {
+  useEffect(() => {
+    document.title = '~gminteer/about';
+  }, []);
+
   return (
     <main className={styles.About}>
       <Figure

@@ -1,25 +1,24 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 import styles from './Navigation.module.scss';
 
-export default function Navigation({ tabs, currentTab, setCurrentTab }) {
+export default function Navigation({ pages }) {
+  const location = useLocation();
+  const currentPage = location.pathname.replace('/', '');
+
   return (
     <nav className={styles.Navigation}>
       <ul>
-        {tabs.map(
-          (tab, index) =>
-            tab !== 'ROOT' && (
+        {pages.map(
+          (page, index) =>
+            page !== 'ROOT' && (
               <li
                 key={index}
-                className={tab === currentTab ? styles.activeTab : undefined}
+                className={page === currentPage ? styles.activeTab : undefined}
               >
                 <h2>
-                  <a
-                    href={`#${tab.toLowerCase()}`}
-                    onClick={() => setCurrentTab(tab)}
-                  >
-                    {tab}
-                  </a>
+                  <Link to={`/${page}`}>{page}</Link>
                 </h2>
               </li>
             )

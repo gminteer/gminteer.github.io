@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import styles from './Contact.module.scss';
 
 export default function Contact() {
+  useEffect(() => {
+    document.title = '~gminteer/contact';
+  }, []);
+
   const [formState, setFormState] = useState({
     name: '',
     email: '',

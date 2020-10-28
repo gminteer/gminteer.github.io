@@ -1,40 +1,37 @@
-import React, { Suspense, useState, useEffect } from 'react';
+import React, { Suspense } from 'react';
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import Background from 'components/Background';
 import Fortune from 'components/Fortune';
 
-const About = React.lazy(() => import('components/About'));
-const Gallery = React.lazy(() => import('components/Gallery'));
-const Contact = React.lazy(() => import('components/Contact'));
-const Resume = React.lazy(() => import('components/Resume'));
-
-const ContentComponents = {
-  ROOT: <Fortune />,
-  about: <About />,
-  projects: <Gallery />,
-  contact: <Contact />,
-  resume: <Resume />,
+const Pages = {
+  about: React.lazy(() => import('components/About')),
+  projects: React.lazy(() => import('components/Gallery')),
+  contact: React.lazy(() => import('components/Contact')),
+  resume: React.lazy(() => import('components/Resume')),
 };
 
 export default function App() {
-  const tabs = Object.keys(ContentComponents);
-  const [currentTab, setCurrentTab] = useState(tabs[0]);
-  const props = { tabs, currentTab, setCurrentTab };
-  useEffect(() => {
-    document.title =
-      currentTab === 'ROOT' ? '~gminteer/' : `~gminteer/${currentTab}`;
-  }, [currentTab]);
-
   return (
-    <>
+    <Router>
       <Background />
-      <Header {...props} />
+      <Header pages={Object.keys(Pages)} />
       <Suspense fallback={<div>Loading...</div>}>
-        {ContentComponents[currentTab]}
+        <Switch>
+          <Route exact path="/">
+            <Fortune />
+          </Route>
+          {Object.entries(Pages).map(([path, Page]) => (
+            <Route key={path} exact path={`/${path}`}>
+              <Page />
+            </Route>
+          ))}
+        </Switch>
       </Suspense>
       <Footer />
-    </>
+    </Router>
   );
 }
