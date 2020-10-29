@@ -16,12 +16,12 @@
     height: var(--img-size);
     width: var(--img-size);
     border-radius: var(--border-radius);
-    border: $border-primary;
     position: relative;
 
     img {
-      height: 100%;
-      width: 100%;
+      height: var(--img-size);
+      width: var(--img-size);
+      border: $border-primary;
       border-radius: var(--border-radius);
     }
   }
@@ -79,6 +79,10 @@
   }
 
   @media screen and (min-width: 768px) {
+    width: 65%;
+  }
+
+  @media screen and (min-width: 1024px) {
     flex-direction: row;
 
     figcaption {
@@ -96,8 +100,5 @@
         border-top: none;
       }
     }
-  }
-  @media screen and (min-width: 1024px) {
-    width: 65%;
   }
 }

@@ -6,10 +6,12 @@
   --border-radius: 50%;
 
   @media screen and (min-width: 425px) {
-    --img-size: 14em;
+    --img-size: 12em;
   }
   @media screen and (min-width: 768px) {
-    --img-size: 28em;
+    --img-size: 24em;
+  }
+  @media screen and (min-width: 1024px) {
     justify-content: center;
   }
 }
