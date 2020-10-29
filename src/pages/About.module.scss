@@ -5,12 +5,11 @@
   --img-size: 8em;
   --border-radius: 50%;
 
-  justify-content: center;
-
   @media screen and (min-width: 425px) {
-    --img-size: 12em;
+    --img-size: 14em;
   }
   @media screen and (min-width: 768px) {
-    --img-size: 18em;
+    --img-size: 28em;
+    justify-content: center;
   }
 }

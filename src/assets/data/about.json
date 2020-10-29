@@ -4,5 +4,6 @@
     "alt": "Greg Minteer"
   },
   "title": "Greg Minteer",
-  "blurb": "Hi! I'm Greg. I'm an aspiring full-stack web developer and lifelong computer addict. I should come up with a better brand statement here."
+  "blurb": "Hi! I'm Greg. I'm an aspiring full-stack web developer and lifelong computer addict. I've spent the better part of 20 years professionally supporting Windows computers, and was not expecting to love JavaScript as much as I do.",
+  "currently_learning": ["Typescript", "ASP.NET Core", "C#", ".NET Core", "LINQ", "Docker", "Kubernetes"]
 }

@@ -9,7 +9,6 @@ export default () => (
     <div className={`${styles.stripe} ${styles.primaryLighter}`} />
     <div className={`${styles.stripe} ${styles.primaryInvert}`} />
     <div className={`${styles.stripe} ${styles.white}`} />
-    <div className={styles.overlay} />
     <div className={styles.stripe} />
   </div>
 );

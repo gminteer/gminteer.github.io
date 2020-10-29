@@ -14,7 +14,19 @@ export default function About() {
       <Figure
         imgCfg={data.img}
         title={<h3>{data.title}</h3>}
-        body={<p>{data.blurb}</p>}
+        body={
+          <>
+            <p>{data.blurb}</p>
+            <div>
+              <h4>Things I'm currently learning:</h4>
+              <ul>
+                {data.currently_learning.map((thing) => (
+                  <li>{thing}</li>
+                ))}
+              </ul>
+            </div>
+          </>
+        }
       />
     </main>
   );
