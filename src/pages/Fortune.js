@@ -15,8 +15,8 @@ export default function Fortune() {
       //   say({
       //     text: Array(15)
       //       .fill()
-      //       .map((i) => [...Array(10).keys()].join('').repeat(8) + '\n')
-      //       .join(''),
+      //       .map((i) => [...Array(10).keys()].join('').repeat(8))
+      //       .join('\n'),
       //     e: '??',
       //     n: true,
       //   })
@@ -29,9 +29,7 @@ export default function Fortune() {
   return (
     <FakeTerminal
       message={
-        message
-          ? message
-          : say({ text: 'Taking the auspices...', e: '--', n: true })
+        message ? message : say({ text: 'Taking the auspices...', e: '--' })
       }
     />
   );

@@ -15,27 +15,25 @@ const Pages = {
   resume: React.lazy(() => import('pages/Resume')),
 };
 
-export default function App() {
-  return (
-    <Router basename={process.env.PUBLIC_URL}>
-      <Background />
-      <Header pages={Object.keys(Pages)} />
-      <Suspense fallback={<Fallback text="Now loading..." />}>
-        <Switch>
-          <Route exact path="/">
-            <Fortune />
+export default () => (
+  <Router basename={process.env.PUBLIC_URL}>
+    <Background />
+    <Header pages={Object.keys(Pages)} />
+    <Suspense fallback={<Fallback text="Now loading..." />}>
+      <Switch>
+        <Route exact path="/">
+          <Fortune />
+        </Route>
+        {Object.entries(Pages).map(([path, Page]) => (
+          <Route key={path} exact path={`/${path}`}>
+            <Page />
           </Route>
-          {Object.entries(Pages).map(([path, Page]) => (
-            <Route key={path} exact path={`/${path}`}>
-              <Page />
-            </Route>
-          ))}
-          <Route fallback>
-            <Fallback text="404: not found" isError />
-          </Route>
-        </Switch>
-      </Suspense>
-      <Footer />
-    </Router>
-  );
-}
+        ))}
+        <Route fallback>
+          <Fallback text="404: not found" isError />
+        </Route>
+      </Switch>
+    </Suspense>
+    <Footer />
+  </Router>
+);
