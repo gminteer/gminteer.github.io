@@ -3,6 +3,7 @@
 .FakeTerminal {
   font-family: var(--mono-font);
   color: $primary-invert;
+  justify-content: center;
 
   .card {
     width: 85%;
@@ -28,7 +29,7 @@
 
       .tabBackground {
         background-color: $primary;
-        flex-grow: 2;
+        flex-grow: 1;
       }
     }
 

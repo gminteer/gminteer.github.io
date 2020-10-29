@@ -6,7 +6,7 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 import Background from 'components/Background';
 import Fortune from 'pages/Fortune';
-import ErrorPage from 'pages/ErrorPage';
+import Fallback from 'pages/Fallback';
 
 const Pages = {
   about: React.lazy(() => import('pages/About')),
@@ -20,7 +20,7 @@ export default function App() {
     <Router basename={process.env.PUBLIC_URL}>
       <Background />
       <Header pages={Object.keys(Pages)} />
-      <Suspense fallback={<ErrorPage text="Now loading..." />}>
+      <Suspense fallback={<Fallback text="Now loading..." />}>
         <Switch>
           <Route exact path="/">
             <Fortune />
@@ -31,7 +31,7 @@ export default function App() {
             </Route>
           ))}
           <Route fallback>
-            <ErrorPage text="404: not found" />
+            <Fallback text="404: not found" isError />
           </Route>
         </Switch>
       </Suspense>
