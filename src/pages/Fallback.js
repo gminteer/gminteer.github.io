@@ -11,7 +11,7 @@ export default function Fallback({
 }) {
   useEffect(() => {
     document.title = 'Something went wrong :(';
-  });
+  }, []);
   if (isError && e === 'oo') e = 'xx';
   return <FakeTerminal isError message={say({ text, e, n })} />;
 }
