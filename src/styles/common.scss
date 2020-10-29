@@ -1,4 +1,4 @@
-// color scheme
+// color map
 $colors: (
   'imperial-red': #e63946,
   'honeydew': #f1faee,
@@ -32,13 +32,15 @@ $accent: map-get(
   $key: 'imperial-red',
 );
 
-$error: map-get(
-  $map: $colors,
-  $key: 'imperial-red',
+$error: adjust-color(
+  $color:
+    map-get(
+      $map: $colors,
+      $key: 'imperial-red',
+    ),
+  $lightness: -15%,
 );
 
 // shared variables
 $border-primary: 0.25em solid $primary-darker;
-// hacks to get around position: fixed
-$header-height: 3.5em;
-$footer-height: 2.5em;
+$shadow: 0.25em 0.25em 1em 0.3em rgba(0.6, 0.6, 0.6, 0.6);

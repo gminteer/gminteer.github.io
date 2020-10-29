@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 65%;
+  width: 85%;
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 
@@ -17,7 +17,17 @@
     width: var(--img-size);
     border-radius: var(--border-radius);
     border: $border-primary;
-    z-index: 1;
+    position: relative;
+  }
+
+  img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 4em 4em 4em 4em red;
   }
 
   figcaption {
@@ -29,6 +39,8 @@
     margin-top: calc(var(--img-offset) * -1);
     width: 100%;
     height: calc(max(fit-content, 12em));
+    z-index: -1;
+    box-shadow: $shadow;
 
     .title {
       border-top: var(--img-offset) solid $primary-darker;
@@ -69,5 +81,8 @@
         border-top: none;
       }
     }
+  }
+  @media screen and (min-width: 1024px) {
+    width: 65%;
   }
 }

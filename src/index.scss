@@ -24,19 +24,22 @@
 }
 
 html,
-body {
+body,
+#root {
   height: 100%;
 }
 
 body {
   background-color: $primary-invert;
-  display: flex;
-  flex-direction: column;
   font-family: var(--serif-font);
-  justify-content: center;
 }
 
 #root {
-  height: calc(100% - calc(#{$header-height} + #{$footer-height}));
-  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  main {
+    flex-grow: 1;
+    overflow: auto;
+  }
 }

@@ -15,6 +15,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    box-shadow: $shadow;
 
     header {
       display: flex;
@@ -40,7 +41,7 @@
       font-family: var(--mono-font);
       height: 100%;
       overflow: auto;
-      font-size: 0.85em;
+      font-size: 0.65em;
       word-wrap: break-word;
       white-space: pre-wrap;
       background-color: $primary-darker;
@@ -63,6 +64,14 @@
       }
       .prompt {
         color: lightgreen;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .card {
+      pre {
+        font-size: 0.8em;
       }
     }
   }

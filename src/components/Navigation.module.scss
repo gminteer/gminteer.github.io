@@ -2,7 +2,6 @@
 
 .Navigation {
   h2 {
-    display: inline;
     font-size: medium;
   }
 
@@ -16,8 +15,7 @@
   a {
     font-family: var(--mono-font);
     text-transform: capitalize;
-    padding-left: 0.45em;
-    padding-right: 0.45em;
+    padding: 0.25em;
   }
 
   a,
@@ -34,6 +32,12 @@
   }
 
   @media screen and (min-width: 768px) {
+    h2 {
+      font-size: large;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
     h2 {
       font-size: x-large;
     }

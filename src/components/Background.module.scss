@@ -1,10 +1,7 @@
 @import 'styles/common';
 
-@function getDarker($colorname) {
-  @return adjust-color(
-    map-get($map: $colors, $key: $colorname),
-    $lightness: -10%
-  );
+@function darker($color) {
+  @return adjust-color($color, $lightness: -10%);
 }
 
 .Background {
@@ -26,21 +23,21 @@
   }
 
   .primaryDarker {
-    background-color: getDarker('prussian-blue');
+    background-color: darker($primary-darker);
   }
   .primary {
-    background-color: getDarker('celadon-blue');
+    background-color: darker($primary);
   }
   .primaryLighter {
-    background-color: getDarker('powder-blue');
+    background-color: darker($primary-lighter);
   }
   .primaryInvert {
-    background-color: getDarker('honeydew');
+    background-color: darker($primary-invert);
   }
   .white {
-    background-color: white;
+    background-color: darker(white);
   }
   .accent {
-    background-color: getDarker('imperial-red');
+    background-color: darker($accent);
   }
 }
