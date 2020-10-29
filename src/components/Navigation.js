@@ -10,19 +10,16 @@ export default function Navigation({ pages }) {
   return (
     <nav className={styles.Navigation}>
       <ul>
-        {pages.map(
-          (page, index) =>
-            page !== 'ROOT' && (
-              <li
-                key={index}
-                className={page === currentPage ? styles.activeTab : undefined}
-              >
-                <h2>
-                  <Link to={`/${page}`}>{page}</Link>
-                </h2>
-              </li>
-            )
-        )}
+        {pages.map((page, index) => (
+          <li
+            key={index}
+            className={page === currentPage ? styles.activeTab : undefined}
+          >
+            <h2>
+              <Link to={`/${page}`}>{page}</Link>
+            </h2>
+          </li>
+        ))}
       </ul>
     </nav>
   );
