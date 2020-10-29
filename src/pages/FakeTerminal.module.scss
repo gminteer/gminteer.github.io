@@ -1,11 +1,6 @@
 @import 'styles/common';
 
 .FakeTerminal {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-family: var(--mono-font);
   color: $primary-invert;
 

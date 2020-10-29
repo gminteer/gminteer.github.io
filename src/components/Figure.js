@@ -16,7 +16,9 @@ export default function Figure({ title, body, imgCfg }) {
 
   return (
     <figure className={styles.Figure}>
-      <img src={img ? img : placeholder} alt={imgCfg.alt} />
+      <div class={styles.imgContainer}>
+        <img src={img ? img : placeholder} alt={imgCfg.alt} />
+      </div>
       <figcaption>
         <section className={styles.title}>{title}</section>
         <section className={styles.body}>{body}</section>

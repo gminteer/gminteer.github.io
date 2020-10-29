@@ -9,25 +9,33 @@
   justify-content: center;
   align-items: center;
   width: 85%;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
 
-  img {
+  .imgContainer {
     height: var(--img-size);
     width: var(--img-size);
     border-radius: var(--border-radius);
     border: $border-primary;
     position: relative;
+
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: var(--border-radius);
+    }
   }
 
-  img::after {
-    content: '';
+  .imgContainer::after {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    box-shadow: 4em 4em 4em 4em red;
+    content: '';
+    border-radius: var(--border-radius);
+    z-index: -2;
+    box-shadow: $shadow;
   }
 
   figcaption {
