@@ -1,0 +1,2 @@
+(this["webpackJsonpreact-portfolio"]=this["webpackJsonpreact-portfolio"]||[]).push([[8],{53:function(t,i,o){"use strict";o.r(i),i.default=o.p+"static/media/github.48b516bb.svg"}}]);
+//# sourceMappingURL=8.c67b1ad1.chunk.js.map
