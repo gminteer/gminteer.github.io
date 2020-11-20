@@ -1,2 +1,0 @@
-(this["webpackJsonpreact-portfolio"]=this["webpackJsonpreact-portfolio"]||[]).push([[10],{59:function(t,s,o){"use strict";o.r(s),s.default=o.p+"static/media/skype.bdcd7f45.svg"}}]);
-//# sourceMappingURL=10.49ee4f07.chunk.js.map
