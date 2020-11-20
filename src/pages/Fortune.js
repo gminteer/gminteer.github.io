@@ -23,11 +23,11 @@ export default function Fortune() {
       // );
     }
     applyFortune();
-    document.title = '~gminteer/';
   }, []);
 
   return (
     <FakeTerminal
+      title="~gminteer/"
       message={
         message ? message : say({ text: 'Taking the auspices...', e: '--' })
       }

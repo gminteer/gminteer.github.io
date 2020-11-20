@@ -1,12 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
+import Page from './Page';
 import styles from './Contact.module.scss';
 
 export default function Contact() {
-  useEffect(() => {
-    document.title = '~gminteer/contact';
-  }, []);
-
   const [formState, setFormState] = useState({
     name: '',
     email: '',
@@ -61,7 +58,7 @@ export default function Contact() {
   }
 
   return (
-    <main className={styles.Contact}>
+    <Page style={styles.Contact} title="~gminteer/contact">
       <form id="comment" onSubmit={submitForm}>
         <div className={styles.labelBlock}>
           <label htmlFor="name">Your name</label>
@@ -104,6 +101,6 @@ export default function Contact() {
         />
         <button type="submit">Submit</button>
       </form>
-    </main>
+    </Page>
   );
 }

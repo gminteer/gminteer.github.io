@@ -3,15 +3,13 @@ import React, { useEffect } from 'react';
 import Tree from 'components/Tree';
 import treeData from 'assets/data/tree.json';
 import data from 'assets/data/resume.json';
+
+import Page from './Page';
 import styles from './Resume.module.scss';
 
 export default function Resume() {
-  useEffect(() => {
-    document.title = '~gminteer/resume';
-  }, []);
-
   return (
-    <main className={styles.Resume}>
+    <Page style={styles.Resume} title="~gminteer/resume">
       <div className={styles.card}>
         <section className={styles.title}>
           <h3>
@@ -22,6 +20,6 @@ export default function Resume() {
           <Tree data={treeData} />
         </section>
       </div>
-    </main>
+    </Page>
   );
 }

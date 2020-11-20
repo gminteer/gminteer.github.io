@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { say } from 'cowsay-browser';
 
 import FakeTerminal from './FakeTerminal';
@@ -9,9 +9,12 @@ export default function Fallback({
   n = true,
   isError = false,
 }) {
-  useEffect(() => {
-    document.title = 'Something went wrong :(';
-  }, []);
   if (isError && e === 'oo') e = 'xx';
-  return <FakeTerminal isError message={say({ text, e, n })} />;
+  return (
+    <FakeTerminal
+      title="Something went wrong :("
+      isError
+      message={say({ text, e, n })}
+    />
+  );
 }

@@ -1,19 +1,18 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import Figure from 'components/Figure';
 import projects from 'assets/data/projects.json';
+
+import Page from './Page';
 import styles from './Gallery.module.scss';
 
 export default function Projects() {
-  useEffect(() => {
-    document.title = '~gminteer/projects';
-  }, []);
-
   return (
-    <main className={styles.Gallery}>
+    <Page style={styles.Gallery} title="~gminteer/projects">
       {projects.map((project, index) => (
         <Figure
           imgCfg={project.img}
+          style={styles.figure}
           title={<h3>{project.name}</h3>}
           body={
             <>
@@ -29,6 +28,6 @@ export default function Projects() {
           key={index}
         />
       ))}
-    </main>
+    </Page>
   );
 }

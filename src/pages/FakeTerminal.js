@@ -1,10 +1,11 @@
 import React from 'react';
 
+import Page from './Page';
 import styles from './FakeTerminal.module.scss';
 
-export default function FakeTerminal({ message, isError = false }) {
+export default function FakeTerminal({ title, message, isError = false }) {
   return (
-    <main className={styles.FakeTerminal}>
+    <Page style={styles.FakeTerminal} title={title}>
       <div className={styles.card}>
         <header>
           <span className={styles.activeTab}>Terminal</span>
@@ -23,6 +24,6 @@ export default function FakeTerminal({ message, isError = false }) {
           </span>
         </pre>
       </div>
-    </main>
+    </Page>
   );
 }
