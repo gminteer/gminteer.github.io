@@ -1,2 +1,0 @@
-(this["webpackJsonpreact-portfolio"]=this["webpackJsonpreact-portfolio"]||[]).push([[12],{63:function(t,o,p){"use strict";p.r(o),o.default=p.p+"static/media/lyric-look-up.e0ce9f15.jpg"}}]);
-//# sourceMappingURL=12.4d03f3a1.chunk.js.map
