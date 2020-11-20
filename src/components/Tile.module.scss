@@ -1,0 +1,72 @@
+@import 'styles/common';
+
+.Tile {
+  height: var(--img-size);
+  width: var(--img-size);
+  position: relative;
+
+  &.isTall {
+    height: calc(var(--img-size) * 2);
+    grid-row: span 2;
+  }
+
+  &.isWide {
+    width: calc(var(--img-size) * 2);
+    grid-column: span 2;
+  }
+
+  .imgContainer {
+    border-radius: var(--border-radius);
+    height: 100%;
+    width: 100%;
+
+    img {
+      border: $border-primary;
+      border-radius: var(--border-radius);
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  figcaption {
+    position: absolute;
+    bottom: 0;
+    height: 67%;
+    width: 100%;
+  }
+
+  .cardTitle {
+    background-color: rgba($primary, 0.9);
+    width: 100%;
+
+    h3 {
+      font-family: var(--sans-font);
+      color: $primary-invert;
+      padding-top: 0.1em;
+      padding-bottom: 0.1em;
+      padding-right: 1em;
+      text-align: right;
+    }
+  }
+
+  .cardBody {
+    background-color: rgba($primary-darker, 0.9);
+    width: 100%;
+    padding: 0.5em;
+    height: 100%;
+    border: $border-primary;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    color: $primary-invert;
+
+    a,
+    a:visited {
+      color: $primary-invert;
+    }
+  }
+  @media screen and (min-width: 425px) {
+    figcaption {
+      height: 50%;
+    }
+  }
+}

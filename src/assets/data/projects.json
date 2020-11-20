@@ -7,7 +7,9 @@
     "img": {
       "src": "tenpai-buddy.png",
       "alt": "Tenpai Buddy! in action"
-    }
+    },
+    "isTall": true,
+    "isWide": true
   },
   {
     "name": "pair.pro",
@@ -17,7 +19,8 @@
     "img": {
       "src": "pair-pro.jpg",
       "alt": "pair.pro in action"
-    }
+    },
+    "isWide": true
   },
   {
     "name": "Lyric Look-up",
@@ -27,6 +30,7 @@
     "img": {
       "src": "lyric-look-up.jpg",
       "alt": "Lyric Look-up in action"
-    }
+    },
+    "isTall": true
   }
 ]

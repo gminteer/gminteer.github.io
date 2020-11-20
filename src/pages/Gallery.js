@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Figure from 'components/Figure';
+import Tile from 'components/Tile';
 import projects from 'assets/data/projects.json';
 
 import Page from './Page';
@@ -9,25 +9,31 @@ import styles from './Gallery.module.scss';
 export default function Projects() {
   return (
     <Page style={styles.Gallery} title="~gminteer/projects">
-      {projects.map((project, index) => (
-        <Figure
-          imgCfg={project.img}
-          style={styles.Figure}
-          title={<h3>{project.name}</h3>}
-          body={
-            <>
-              <p>{project.blurb}</p>
-              <p>
-                <a href={project.live}>Live demo</a>
-              </p>
-              <p>
-                <a href={project.repo}>View source</a>
-              </p>
-            </>
-          }
-          key={index}
-        />
-      ))}
+      <div className={styles.tileContainer}>
+        {projects.map((project, index) => (
+          <Tile
+            imgCfg={project.img}
+            style={`${styles.Tile}`}
+            isTall={project.isTall}
+            isWide={project.isWide}
+            title={<h3>{project.name}</h3>}
+            body={
+              <div className={styles.cardBody}>
+                <p>{project.blurb}</p>
+                <nav>
+                  <span>
+                    <a href={project.live}>Live demo</a>
+                  </span>
+                  <span>
+                    <a href={project.repo}>View source</a>
+                  </span>
+                </nav>
+              </div>
+            }
+            key={index}
+          />
+        ))}
+      </div>
     </Page>
   );
 }

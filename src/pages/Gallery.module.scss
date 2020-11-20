@@ -1,15 +1,57 @@
 .Gallery {
-  .Figure {
-    // Figure component variables
-    --img-size: 10em;
+  --img-size: 9em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .tileContainer {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, var(--img-size));
+    grid-auto-rows: var(--img-size);
+    grid-gap: 0.5em;
+    grid-auto-flow: dense;
+  }
+
+  .Tile {
     --border-radius: 2em;
 
-    @media screen and (min-width: 425px) {
-      --img-size: 13em;
-    }
+    .cardBody {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
-    @media screen and (min-width: 768px) {
-      --img-size: 16em;
+      nav {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 0.3em;
+        padding-right: 0.3em;
+      }
+    }
+  }
+
+  @media screen and (min-width: 425px) {
+    --img-size: 12em;
+  }
+
+  @media screen and (min-width: 768px) {
+    --img-size: 15em;
+
+    .tileContainer {
+      grid-template-columns: repeat(3, var(--img-size));
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .tileContainer {
+      grid-template-columns: repeat(4, var(--img-size));
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    .tileContainer {
+      grid-template-columns: repeat(5, var(--img-size));
     }
   }
 }
