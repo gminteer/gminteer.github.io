@@ -10,11 +10,9 @@
 }
 
 :root {
-  --mono-font: 'Cascadia Code', 'Consolas', 'Lucida Console', 'Monaco',
-    'Courier New', 'Courier', monospace;
-  --sans-font: 'Open Sans', Arial, Helvetica, sans-serif;
-  --serif-font: 'EB Garamond', 'Palatino Linotype', 'Book Antiqua', Palatino,
-    serif;
+  --mono-font: 'Cascadia Code', monospace;
+  --sans-font: 'Open Sans', sans-serif;
+  --serif-font: 'EB Garamond', serif;
 }
 
 * {
@@ -38,13 +36,4 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  main {
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 1;
-    overflow: auto;
-  }
 }
