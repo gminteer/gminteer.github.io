@@ -13,7 +13,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0"
   },
-  "homepage": "https://gminteer.github.io/react-portfolio",
+  "homepage": "https://gminteer.github.io/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
