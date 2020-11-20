@@ -1,0 +1,2 @@
+(this["webpackJsonpreact-portfolio"]=this["webpackJsonpreact-portfolio"]||[]).push([[13],{65:function(t,p,e){"use strict";e.r(p),p.default=e.p+"static/media/tenpai-buddy.780e9239.png"}}]);
+//# sourceMappingURL=13.f2d54de7.chunk.js.map
