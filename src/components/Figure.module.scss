@@ -40,7 +40,8 @@
 
   figcaption {
     margin-top: calc(var(--img-offset) * -1);
-    border-top: var(--img-offset) solid $primary-darker;
+    border-top: var(--img-offset) solid $primary;
+    border-radius: 2em 2em 0 0;
     height: calc(max(fit-content, 12em));
     width: 100%;
     box-shadow: $shadow;

@@ -1,9 +1,8 @@
 @import 'styles/common';
 
 .Footer {
-  background-color: $primary-darker;
-  padding: 0.25em;
-  border-top: $border-primary;
+  background-color: $primary-lighter;
+  padding: 0.1em;
 
   ul {
     display: flex;
@@ -11,6 +10,7 @@
     list-style-type: none;
     align-items: center;
     justify-content: space-around;
+    margin-top: 0.4em;
   }
 
   a {
@@ -20,9 +20,5 @@
   .icon {
     height: 2em;
     width: 2em;
-  }
-
-  .icon.mono {
-    filter: invert(100%);
   }
 }

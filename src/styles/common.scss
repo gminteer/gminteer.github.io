@@ -42,8 +42,8 @@ $error: adjust-color(
 );
 
 // shared variables
-$border-primary: 0.25em solid $primary-darker;
-$thin-border: 0.1em solid;
+$border-primary: 0.25em solid $primary;
+$border-thin: 0.1em solid;
 $shadow: 0.25em 0.25em 1em 0.3em rgba(0.6, 0.6, 0.6, 0.6);
 
 @mixin card-container {

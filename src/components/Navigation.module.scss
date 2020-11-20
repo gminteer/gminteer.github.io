@@ -1,6 +1,11 @@
 @import 'styles/common';
 
 .Navigation {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  background-color: $primary;
+
   h2 {
     font-size: medium;
     font-weight: normal;
@@ -11,9 +16,12 @@
     flex-direction: row;
     justify-content: space-around;
     list-style-type: none;
-    border-left: $thin-border $primary-darker;
-    border-top: $thin-border $primary-darker;
-    border-right: $thin-border $primary-darker;
+  }
+
+  li {
+    border-left: $border-thin $primary;
+    border-top: $border-thin $primary;
+    border-right: $border-thin $primary;
   }
 
   a {
@@ -29,9 +37,9 @@
 
   .activeTab {
     background-color: $primary-lighter;
-    border-left: $thin-border black;
-    border-top: $thin-border black;
-    border-right: $thin-border black;
+    border-left: $border-thin black;
+    border-top: $border-thin black;
+    border-right: $border-thin black;
 
     a,
     a:visited {
