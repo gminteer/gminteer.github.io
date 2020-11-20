@@ -34,7 +34,7 @@
     right: 0;
     content: '';
     border-radius: var(--border-radius);
-    z-index: -2;
+    z-index: -1;
     box-shadow: $shadow;
   }
 
@@ -43,7 +43,6 @@
     border-top: var(--img-offset) solid $primary-darker;
     height: calc(max(fit-content, 12em));
     width: 100%;
-    z-index: -1;
     box-shadow: $shadow;
   }
   .cardTitle,
