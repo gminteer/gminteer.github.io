@@ -1,5 +1,15 @@
 [
   {
+    "name": "Tenpai Buddy!",
+    "blurb": "Develop your mahjong hand faster",
+    "repo": "https://github.com/gminteer/tenpai-buddy",
+    "live": "https://calm-escarpment-77169.herokuapp.com/",
+    "img": {
+      "src": "tenpai-buddy.png",
+      "alt": "Tenpai Buddy! in action"
+    }
+  },
+  {
     "name": "pair.pro",
     "blurb": "Swap skills with other developers",
     "repo": "https://github.com/gminteer/pair-pro",
