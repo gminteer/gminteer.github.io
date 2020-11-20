@@ -8,7 +8,7 @@ import Fallback from 'pages/Fallback';
 export const pages = {
   about: React.lazy(() => import('pages/About')),
   projects: React.lazy(() => import('pages/Gallery')),
-  contact: React.lazy(() => import('pages/Contact')),
+  // contact: React.lazy(() => import('pages/Contact')), TODO: either implement the form and turn back on, or just drop it...
   resume: React.lazy(() => import('pages/Resume')),
 };
 

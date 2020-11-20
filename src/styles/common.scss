@@ -45,3 +45,9 @@ $error: adjust-color(
 $border-primary: 0.25em solid $primary-darker;
 $thin-border: 0.1em solid;
 $shadow: 0.25em 0.25em 1em 0.3em rgba(0.6, 0.6, 0.6, 0.6);
+
+@mixin card-container {
+  width: 90%;
+  height: 90%;
+  box-shadow: $shadow;
+}

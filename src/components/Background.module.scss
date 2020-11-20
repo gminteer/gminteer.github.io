@@ -25,18 +25,23 @@
   .primaryDarker {
     background-color: darker($primary-darker);
   }
+
   .primary {
     background-color: darker($primary);
   }
+
   .primaryLighter {
     background-color: darker($primary-lighter);
   }
+
   .primaryInvert {
     background-color: darker($primary-invert);
   }
+
   .white {
     background-color: darker(white);
   }
+
   .accent {
     background-color: darker($accent);
   }

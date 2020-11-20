@@ -2,10 +2,9 @@
 
 .Resume {
   .container {
-    width: 90%;
-    height: 90%;
-    box-shadow: $shadow;
+    @include card-container;
   }
+
   .cardBody {
     background-color: $primary-lighter;
     border: $border-primary;
@@ -13,5 +12,6 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    padding: 2em;
   }
 }

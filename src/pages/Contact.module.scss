@@ -4,9 +4,7 @@ $field-border: 0.25em solid;
 
 .Contact {
   .container {
-    width: 90%;
-    height: 90%;
-    box-shadow: $shadow;
+    @include card-container;
 
     * {
       font-family: var(--sans-font);

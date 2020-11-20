@@ -5,9 +5,7 @@
   color: $primary-invert;
 
   .container {
-    width: 90%;
-    height: 90%;
-    box-shadow: $shadow;
+    @include card-container;
   }
 
   .cardBody {
@@ -37,6 +35,7 @@
       .icon {
         height: 1em;
         margin: 0.2em;
+
         img {
           height: 100%;
           width: 100%;
@@ -58,18 +57,23 @@
       span {
         font-weight: bold;
       }
+
       .dir {
         color: teal;
       }
+
       .branch {
         color: purple;
       }
+
       .node {
         color: green;
       }
+
       .errorPrompt {
         color: red;
       }
+
       .prompt {
         color: lightgreen;
       }
