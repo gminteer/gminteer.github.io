@@ -1,11 +1,31 @@
-.Figure {
-  --img-size: 8em;
-  --border-radius: 50%;
+.About {
+  .Figure {
+    --img-size: 8em;
+    --border-radius: 50%;
 
-  @media screen and (min-width: 425px) {
-    --img-size: 12em;
+    @media screen and (min-width: 425px) {
+      --img-size: 12em;
+    }
+    @media screen and (min-width: 768px) {
+      --img-size: 24em;
+    }
   }
-  @media screen and (min-width: 768px) {
-    --img-size: 24em;
+
+  .cardBody {
+    .currentlyLearning {
+      margin-top: 2em;
+      h4 {
+        margin-bottom: 1.5em;
+      }
+
+      ul {
+        margin-left: 4em;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    justify-content: center;
   }
 }

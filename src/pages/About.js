@@ -12,19 +12,23 @@ export default function About() {
       <Figure
         imgCfg={data.img}
         style={styles.Figure}
-        title={<h3>{data.title}</h3>}
+        title={
+          <div className={styles.cardHeader}>
+            <h3>{data.title}</h3>
+          </div>
+        }
         body={
-          <>
+          <div className={styles.cardBody}>
             <p>{data.blurb}</p>
-            <div>
-              <h4>Things I'm currently learning:</h4>
+            <div className={styles.currentlyLearning}>
+              <h4>Currently trying to pick up:</h4>
               <ul>
                 {data.currently_learning.map((thing) => (
                   <li key={thing}>{thing}</li>
                 ))}
               </ul>
             </div>
-          </>
+          </div>
         }
       />
     </Page>

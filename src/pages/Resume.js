@@ -19,7 +19,9 @@ export default function Resume() {
             </h3>
           }
         >
-          <Tree data={treeData} />
+          <div className={styles.cardBody}>
+            <Tree data={treeData} />
+          </div>
         </Card>
       </div>
     </Page>

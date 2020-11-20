@@ -2,76 +2,81 @@
 
 $field-border: 0.25em solid;
 
-.container {
-  width: 90%;
-  height: 90%;
-  box-shadow: $shadow;
+.Contact {
+  .container {
+    width: 90%;
+    height: 90%;
+    box-shadow: $shadow;
 
-  * {
-    font-family: var(--sans-font);
-  }
-
-  form {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-
-    .labelBlock {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
+    * {
+      font-family: var(--sans-font);
     }
 
-    label {
+    form {
+      background-color: $primary-lighter;
+      padding: 1em;
+      border: $border-primary;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .labelBlock {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      label {
+        font-weight: bold;
+        font-style: italic;
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+      }
+
+      input,
+      textarea,
+      button {
+        outline: none;
+      }
+
+      input,
+      textarea {
+        background-color: $primary-invert;
+        border: $field-border $primary-darker;
+        border-radius: 0.25em;
+        padding: 0.25em;
+      }
+
+      .invalidField {
+        border: $field-border $error;
+      }
+
+      input:focus,
+      textarea:focus,
+      button:focus {
+        border: $field-border $primary-lighter;
+      }
+
+      textarea {
+        flex-grow: 1;
+        margin-bottom: 1.5em;
+      }
+
+      button {
+        padding: 0.25em;
+        background-color: $primary-darker;
+        color: $primary-invert;
+        border: $field-border $primary-darker;
+        text-decoration: underline;
+        font-size: large;
+      }
+    }
+    .error {
+      color: $error;
       font-weight: bold;
       font-style: italic;
-      margin-top: 0.2em;
-      margin-bottom: 0.2em;
     }
-
-    input,
-    textarea,
-    button {
-      outline: none;
-    }
-
-    input,
-    textarea {
-      background-color: $primary-invert;
-      border: $field-border $primary-darker;
-      border-radius: 0.25em;
-      padding: 0.25em;
-    }
-
-    .invalidField {
-      border: $field-border $error;
-    }
-
-    input:focus,
-    textarea:focus,
-    button:focus {
-      border: $field-border $primary-lighter;
-    }
-
-    textarea {
-      flex-grow: 1;
-      margin-bottom: 1.5em;
-    }
-
-    button {
-      padding: 0.25em;
-      background-color: $primary-darker;
-      color: $primary-invert;
-      border: $field-border $primary-darker;
-      text-decoration: underline;
-      font-size: large;
-    }
-  }
-  .error {
-    color: $error;
-    font-weight: bold;
-    font-style: italic;
   }
 }

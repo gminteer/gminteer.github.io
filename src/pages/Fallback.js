@@ -13,8 +13,8 @@ export default function Fallback({
   return (
     <FakeTerminal
       title="Something went wrong :("
-      isError
       message={say({ text, e, n })}
+      isError
     />
   );
 }

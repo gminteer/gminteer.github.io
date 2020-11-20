@@ -5,7 +5,7 @@ import { AnimatePresence } from 'framer-motion';
 import Fortune from 'pages/Fortune';
 import Fallback from 'pages/Fallback';
 
-const Pages = {
+export const pages = {
   about: React.lazy(() => import('pages/About')),
   projects: React.lazy(() => import('pages/Gallery')),
   contact: React.lazy(() => import('pages/Contact')),
@@ -22,7 +22,7 @@ export default function PagePicker() {
           <Route exact path="/">
             <Fortune />
           </Route>
-          {Object.entries(Pages).map(([path, Page]) => (
+          {Object.entries(pages).map(([path, Page]) => (
             <Route key={path} exact path={`/${path}`}>
               <Page />
             </Route>

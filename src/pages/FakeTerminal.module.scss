@@ -4,35 +4,48 @@
   font-family: var(--mono-font);
   color: $primary-invert;
 
-  .card {
-    width: 85%;
-    height: 85%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+  .container {
+    width: 90%;
+    height: 90%;
     box-shadow: $shadow;
+  }
+
+  .cardBody {
+    width: 100%;
+    flex-grow: 1;
+    overflow: hidden;
 
     header {
+      width: 100%;
       display: flex;
-      flex-direction: row;
-      border-bottom: 0.25em solid $primary-darker;
+      align-items: center;
+      background-color: $primary;
 
       span {
-        padding-left: 0.5em;
-        padding-right: 0.5em;
+        height: 100%;
       }
 
-      .activeTab {
-        background-color: $primary-darker;
+      .windowName {
+        padding-left: 1em;
+        padding-right: 1em;
       }
 
-      .tabBackground {
-        background-color: $primary;
+      .activeWindow {
         flex-grow: 1;
+      }
+
+      .icon {
+        height: 1em;
+        margin: 0.2em;
+        img {
+          height: 100%;
+          width: 100%;
+        }
       }
     }
 
     pre {
+      flex-grow: 1;
       font-family: var(--mono-font);
       height: 100%;
       overflow: auto;
