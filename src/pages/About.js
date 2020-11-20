@@ -11,7 +11,7 @@ export default function About() {
     <Page style={styles.About} title="~gminteer/about">
       <Figure
         imgCfg={data.img}
-        style={styles.figure}
+        style={styles.Figure}
         title={<h3>{data.title}</h3>}
         body={
           <>

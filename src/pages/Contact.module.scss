@@ -2,24 +2,20 @@
 
 $field-border: 0.25em solid;
 
-.Contact {
+.container {
+  width: 90%;
+  height: 90%;
+  box-shadow: $shadow;
+
   * {
     font-family: var(--sans-font);
   }
 
   form {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: $primary;
-    border: $border-primary;
-    box-shadow: $shadow;
-
-    .labelBlock,
-    input {
-      padding: 0.5em;
-    }
 
     .labelBlock {
       display: flex;
@@ -31,7 +27,8 @@ $field-border: 0.25em solid;
     label {
       font-weight: bold;
       font-style: italic;
-      color: $primary-invert;
+      margin-top: 0.2em;
+      margin-bottom: 0.2em;
     }
 
     input,
@@ -42,8 +39,6 @@ $field-border: 0.25em solid;
 
     input,
     textarea {
-      margin-left: 0.5em;
-      margin-right: 0.5em;
       background-color: $primary-invert;
       border: $field-border $primary-darker;
       border-radius: 0.25em;
@@ -61,8 +56,8 @@ $field-border: 0.25em solid;
     }
 
     textarea {
-      flex-grow: 2;
-      margin-bottom: 0.5em;
+      flex-grow: 1;
+      margin-bottom: 1.5em;
     }
 
     button {
@@ -78,11 +73,5 @@ $field-border: 0.25em solid;
     color: $error;
     font-weight: bold;
     font-style: italic;
-  }
-
-  @media screen and (min-width: 1024px) {
-    form {
-      width: 65%;
-    }
   }
 }

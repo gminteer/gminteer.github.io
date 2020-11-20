@@ -1,6 +1,6 @@
 @import 'styles/common';
 
-// depends on its parent defining --img-size (there's probably a better way to do this)
+// depends on its parent setting --img-size and --border-radius
 .Figure {
   --img-offset: calc(var(--img-size) / 2);
 
@@ -39,43 +39,21 @@
   }
 
   figcaption {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: $primary-lighter;
-    border: $border-primary;
     margin-top: calc(var(--img-offset) * -1);
-    width: 100%;
+    border-top: var(--img-offset) solid $primary-darker;
     height: calc(max(fit-content, 12em));
+    width: 100%;
     z-index: -1;
     box-shadow: $shadow;
+  }
+  .cardTitle,
+  .cardBody {
+    height: 100%;
+    width: 100%;
+  }
 
-    .title {
-      border-top: var(--img-offset) solid $primary-darker;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: $primary-darker;
-      color: $primary-invert;
-      width: 100%;
-      font-family: var(--sans-font);
-      padding: 0.25em;
-    }
-
-    .body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 1em;
-      h4 {
-        padding-top: 1em;
-        padding-bottom: 1em;
-      }
-      ul {
-        padding-left: 0.5em;
-      }
-    }
+  .cardTitle {
+    text-align: center;
   }
 
   @media screen and (min-width: 768px) {
@@ -88,17 +66,14 @@
     figcaption {
       margin-top: 0;
       margin-left: calc(var(--img-offset) * -1);
-      overflow: auto;
-      .title,
-      .body {
-        padding-left: calc(var(--img-offset) * 1.25);
-        ul {
-          margin-left: 3em;
-        }
-      }
-      .title {
-        border-top: none;
-      }
+      border-top: unset;
     }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .cardTitle,
+  .cardBody {
+    padding-left: var(--img-offset);
   }
 }

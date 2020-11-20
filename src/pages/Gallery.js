@@ -12,7 +12,7 @@ export default function Projects() {
       {projects.map((project, index) => (
         <Figure
           imgCfg={project.img}
-          style={styles.figure}
+          style={styles.Figure}
           title={<h3>{project.name}</h3>}
           body={
             <>
